@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_uom_categ_form_view_uom_extension" model="ir.ui.view">
+        <field name="name">product.uom.categ.form.view.uom.extension</field>
+        <field name="model">uom.category</field>
+        <field name="inherit_id" ref="uom.product_uom_categ_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group/field[@name='reference_uom_id']" position="after">
+                <field name="digits_special_variant" invisible="1"/>
+            </xpath>
+            <xpath expr="//tree/field[@name='active']" position="after">
+                <field name="digits_preview" widget="uom_widget" options="{'uom_field': 'name'}"
+                       attrs="{'column_invisible':[('parent.digits_special_variant', '!=', True)], 'invisible':[('name', 'not in', ['Units', 'Dozens', 'units', 'dozens', 'Ед.'])]}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* uom_extension
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-11 16:12+0000\n"
+"PO-Revision-Date: 2023-02-11 16:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uom_extension
+#: model:ir.model,name:uom_extension.model_decimal_precision
+#: model:ir.model.fields,field_description:uom_extension.field_sale_order_line__decimal_precision
+msgid "Decimal Precision"
+msgstr "Точность"
+
+#. module: uom_extension
+#: model:ir.model.fields,field_description:uom_extension.field_uom_uom__digits_preview
+msgid "Digits Preview"
+msgstr "Предпросмотр знаков после запятой"
+
+#. module: uom_extension
+#: model:ir.model.fields,help:uom_extension.field_uom_uom__digits_preview
+msgid "To change the settings for this field, contact your administrator."
+msgstr "Для изменения настроек этого поля, свяжитесь с администратором"
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="purchase_order_uom_extension" model="ir.ui.view">
+        <field name="name">purchase.order.form.uom.extension</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='products']//field[@name='product_qty']" position="attributes">
+                <attribute name="widget">uom_widget</attribute>
+                <attribute name="options">{'uom_field': 'product_uom'}</attribute>
+            </xpath>
+            <xpath expr="//form//field[@name='product_qty']" position="attributes">
+                <attribute name="widget">uom_widget</attribute>
+                <attribute name="options">{'uom_field': 'product_uom'}</attribute>
+            </xpath>
+            <xpath expr="//kanban/field[@name='product_qty']" position="attributes">
+                <attribute name="widget">uom_widget</attribute>
+                <attribute name="options">{'uom_field': 'product_uom'}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase_order_line_tree_uom_extension" model="ir.ui.view">
+        <field name="name">purchase.order.line.tree.uom.extension</field>
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase.purchase_order_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_qty']" position="attributes">
+                <attribute name="widget">uom_widget</attribute>
+                <attribute name="options">{'uom_field': 'product_uom'}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase_order_line_form2_uom_extension" model="ir.ui.view">
+        <field name="name">purchase.order.line.form2.uom.extension</field>
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase.purchase_order_line_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_qty']" position="attributes">
+                <attribute name="widget">uom_widget</attribute>
+                <attribute name="options">{'uom_field': 'product_uom'}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
