@@ -13,16 +13,4 @@
         </field>
     </record>
 
-    <record id="stock_scrap_form_view_uom_extension" model="ir.ui.view">
-        <field name="name">stock.scrap.form.uom.extension</field>
-        <field name="model">stock.scrap</field>
-        <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='scrap_qty']" position="attributes">
-                <attribute name="widget">uom_widget</attribute>
-                <attribute name="options">{'uom_field': 'product_uom_id'}</attribute>
-            </xpath>
-        </field>
-    </record>
-
 </odoo>
