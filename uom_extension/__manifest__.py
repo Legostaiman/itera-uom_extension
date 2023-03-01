@@ -20,6 +20,9 @@
         'views/purchase_order_form.xml',
         'views/product_product_view.xml',
         'views/mrp_production_views.xml',
+        'views/view_stock_quant_tree_inventory_editable.xml',
+        'views/view_warehouse_orderpoint_tree_editable.xml',
+        'views/view_warehouse_orderpoint_tree_editable_config.xml',
     ],
     'assets': {
         'web.assets_backend': [
